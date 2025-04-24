@@ -30,3 +30,14 @@ handleuser(user)
 
 
 
+// truthhy values
+
+//  "0", 'false', [] , function(){}, {} , " "
+
+// false values
+//  0 , 0e , false, null, undefined , Nan 
+//  Nullish coaleasind operator (??)
+
+val = null ?? 10;
+val1 = 5 ?? 10;
+console.log("kdhds", val , "hjdguy", val1);
