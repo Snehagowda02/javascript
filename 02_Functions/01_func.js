@@ -41,3 +41,5 @@ handleuser(user)
 val = null ?? 10;
 val1 = 5 ?? 10;
 console.log("kdhds", val , "hjdguy", val1);
+
+// === not just checks CSSMathValue, but its type also
