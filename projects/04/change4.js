@@ -13,7 +13,8 @@ const displaymsg= document.querySelector('.lowOrHigh')
 // to start over all pushed values should be null take taking its whole div class
 const startOver = document.querySelector('.resultParas')
 
-const p = document.createElement('p')
+const p = document.createElement('p') 
+
 
 
 let prevGuess = [] // to store used entered vlaues
