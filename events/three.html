@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Interval</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+
+    <h1> Date printing is done here </h1>
+    <div>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+
+    </div>
+    
+</body>
+<script>
+
+    const con = function(str){console.log(str, Date.now())}
+    let intervalid;
+   const set = function(){
+    intervalid = setInterval(con, 1000, "hiiiii")}
+
+   document.getElementById('stop').addEventListener('click', function(e){
+     clearInterval(intervalid)
+   } )
+  
+   document.querySelector('#start').addEventListener('click', set)
+
+</script>
+</html>
