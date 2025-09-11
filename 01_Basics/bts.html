@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="background-color: green;"> 
+        <ul class="lang">
+            <li> Kannada romanchanavi</li>
+
+        </ul>
+
+    </div>
+    
+</body>
+<script>
+   const divi= document.createElement('div')
+   console.log(divi)
+   divi.className ="className23"
+   divi.id= "firsrid"
+   divi.innerText= "Hiii jiiii"
+   divi.style.backgroundColor = "blue"
+   divi.setAttribute("title", "name")
+   const text = document.createTextNode("nhyvdrsxdcfvtgbyhn rcftgyh")
+   divi.append(text)
+   document.body.appendChild(divi)
+
+   function addlang(lang){
+    const li = document.createElement('li')
+// const addtext = document.createTextNode(lang)
+    // li.appendChild(addtext) 
+
+    li.appendChild(document.createTextNode(lang))
+    document.body.appendChild(li)
+    document.querySelector('.lang').appendChild(li)
+    //document.querySelector('#firsrid').appendChild(li)
+
+   }
+
+   addlang("kannada")
+   addlang("english")
+
+   // edit
+   const elementtoreplace = document.querySelector('li:nth-child(2)')
+   console.log(elementtoreplace)
+   const newelement = document.createElement('li') // here it is like creating div, li, ui,
+   // why creating new li and adding content to is the elementtoreplace is not just content it is the whole li html element
+   newelement.textContent = 'malyalam'
+   elementtoreplace.replaceWith(newelement)
+
+   //remove
+   const lastlang = document.querySelector('li:last-child')
+   lastlang.remove()
+
+   //outerHTML will directly replace or edit but we need to specify full html like '<li>hindi</li>'
+
+</script>
+</html>
+<!-- here creating child element in db and attaching that to parent i mean body  -->
