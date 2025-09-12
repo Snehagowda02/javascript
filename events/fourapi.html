@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const requesturl = "https://api.github.com/users/Snehagowda02"
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requesturl)
+    console.log(xhr.readyState)
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState)
+        console.log(this.responseText)
+        const data = JSON.parse(this.responseText)
+        console.log(data.repos_url)
+    }
+    console.log(xhr.readyState)
+    xhr.send()
+</script>
+</html>
