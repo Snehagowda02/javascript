@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind</title>
+</head>
+<body>
+    <button>Button Clicked</button>
+    
+</body>
+<script>
+    class React{
+      constructor(){
+        this.library = "react"
+        this.server = "https://localhost:3000"
+        document.querySelector('button')
+        .addEventListener('click', this.handleclick.bind(this)) // here this changes to button 
+      }   // so in handleclick, we get server as undefined
+      handleclick(){
+        console.log("Button clicked")
+        console.log(this)
+        console.log(this.server)
+      }
+    }
+    const obj =new React()
+    
+</script>
+</html>

@@ -5,6 +5,11 @@ class Games{
     logGame(){
         console.log(`GAME IS ${this.game}`)
     }
+
+    static JerseyNo(){
+        return 18
+    }
+   
 }
 
 class Player extends Games{
@@ -23,4 +28,9 @@ const info = new Player("Cricket", "40", "Virat")
 console.log(info)
 info.Tournament()
 info.logGame()
-console.log(info instanceof Player)
+console.log(info instanceof Player) // true
+console.log(info instanceof Games) // true
+
+//console.log(info.JerseyNo())
+// If we define the function as static in Class,
+//  then that function will not be accessable to its Objects as well
